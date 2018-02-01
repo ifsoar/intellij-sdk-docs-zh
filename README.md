@@ -1,4 +1,6 @@
 我是soar，我根据[官方向导](http://www.jetbrains.org/intellij/sdk/docs/welcome.html)自行翻译了一部分以供自己查阅，尚未完成...
+
+一切的起点是从[这里](welcome.md)开始！
 ======
 
 [![官方的JetBrains项目](http://jb.gg/badges/official-flat-square.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
