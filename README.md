@@ -1,3 +1,6 @@
+我是soar，我根据[官方向导](http://www.jetbrains.org/intellij/sdk/docs/welcome.html)自行翻译了一部分以供自己查阅，尚未完成...
+======
+
 [![官方的JetBrains项目](http://jb.gg/badges/official-flat-square.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 IntelliJ平台SDK文档
