@@ -21,7 +21,7 @@ _IntelliJ平台_本身并不是一个产品，而是为构建IDE提供了一个�
 插件可以通过多种方式扩展平台，从添加简单的菜单项到添加对完整语言的支持，构建系统和调试器。 *IntelliJ Platform*中的许多现有功能都是作为插件编写的，可以根据最终产品的需求包含或排除。 请参阅[插件]一节(/basics.md) 获取更多细节.
 
 *IntelliJ Platform*是一个JVM应用程序，主要用Java和Kotlin编写。 您应该熟悉这些语言和相关的工具，才能为基于*IntelliJ Platform*的产品编写插件。 目前，无法在非JVM语言中扩展*IntelliJ Platform*。
-## Open Source
+## 开源
 
 *IntelliJ Platform*是开源的，在[Apache许可证](https://github.com/JetBrains/intellij-community/blob/master/LICENSE.txt) 和 [在GitHub上托管](https://github.com/JetBrains/intellij-community)之下.
 
