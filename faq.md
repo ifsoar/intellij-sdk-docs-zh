@@ -1,32 +1,32 @@
 ---
-title: Plugin Development FAQ
+title: 插件开发常见问题
 ---
 
 
-This FAQ is a topical index of questions that have been asked (and answered) on our
-[OpenAPI forum](https://intellij-support.jetbrains.com/hc/en-us/community/topics/200366979-IntelliJ-IDEA-Open-API-and-Plugin-Development).
+这是我们所有问题的一个热门索引
+[OpenAPI论坛](https://intellij-support.jetbrains.com/hc/en-us/community/topics/200366979-IntelliJ-IDEA-Open-API-and-Plugin-Development).
 
-## Open-Source Plugins
-*  [How do I compile the Scala plugin?](https://github.com/jetbrains/intellij-scala#setting-up-the-project)
+## 开源插件
+*  [我如何编译Scala插件？](https://github.com/jetbrains/intellij-scala#setting-up-the-project)
 
-## Version Differences
-*  [How do I replace my usage of Project.getProjectFile() in 7.0?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139019-Method-will-cease-but-how-to-find-what-to-use-instead-)
-*  [How do I replace my usage of DataConstants with DataKeys in 7.0?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206138959-DataKey-howto-)
-*  [How do I replace my usage of ToolWindowManager.registerToolWindow() in 7.0?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206791795-ToolWindowmanager-registerToolWindow-depricated)
-*  [How do I replace my usage of PsiSearchHelper.findReferences() in 7.0?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139439-Replacement-for-PsiSearchHelper-deprecated-findReferences-method-)
-*  [How do I replace my usage of DelayedFileStatusProvider in 6.0?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206144019-com-intellij-openapi-vcs-DelayedFileStatusProvider-disapeared-in-5218)
+## 版本差异
+*  [我在7.0中怎么使用Project.getProjectFile()？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139019-Method-will-cease-but-how-to-find-what-to-use-instead-)
+*  [如何在7.0中用DataKeys替换DataConstants的用法？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206138959-DataKey-howto-)
+*  [如何替换我在7.0中使用ToolWindowManager.registerToolWindow（）？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206791795-ToolWindowmanager-registerToolWindow-depricated)
+*  [如何替换我在7.0中使用的PsiSearchHelper.findReferences（）？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139439-Replacement-for-PsiSearchHelper-deprecated-findReferences-method-)
+*  [如何替换6.0中的DelayedFileStatusProvider的用法？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206144019-com-intellij-openapi-vcs-DelayedFileStatusProvider-disapeared-in-5218)
 
-## Action System
-*  [How do I trigger actions programmatically?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206130119-Triggering-AnAction-instances-)
-*  [How do I add a main menu item?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206750335-Add-new-Main-menu-option-for-plugin)
-*  [How do I customize the "New..." menu?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206765055-Overriding-the-New-context-menu-in-the-Project-view)
-*  [How do I customize the compiler output context menu?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206142169-How-to-add-a-menu-item-below-Exclude-From-Compile-)
-*  [How do I get the context of an action (selected file, active project etc.)?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206756455-Question-about-Actions)
-*  [How do I change the icon of an action dynamically?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206763405-How-to-dynamically-change-icons-in-the-tool-bar-)
-*  [How do I add icons to the IDEA toolbar?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206151289-How-to-add-icons-to-the-toolbar-)
-*  [Where do I get the list of built-in action IDs?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206126699-List-of-built-in-action-ID-s-)
+## Action 系统
+*  [如何以编程方式触发Action？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206130119-Triggering-AnAction-instances-)
+*  [如何添加主菜单项？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206750335-Add-new-Main-menu-option-for-plugin)
+*  [如何自定义“新建...”菜单？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206765055-Overriding-the-New-context-menu-in-the-Project-view)
+*  [如何自定义编译器输出上下文菜单？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206142169-How-to-add-a-menu-item-below-Exclude-From-Compile-)
+*  [我如何获得一个行动的上下文（选定的文件，活动项目等）？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206756455-Question-about-Actions)
+*  [如何动态更改动作的图标？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206763405-How-to-dynamically-change-icons-in-the-tool-bar-)
+*  [如何将图标添加到IDEA工具栏？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206151289-How-to-add-icons-to-the-toolbar-)
+*  [我在哪里可以获得内置action ID列表？](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206126699-List-of-built-in-action-ID-s-)
 
-## Accessing and Modifying the Source Code
+## 访问和修改源代码
 *  [PSI Architectural Overview](https://www.jetbrains.org/intellij/sdk/docs/basics/architectural_overview/psi.html)
 *  [How do I find all subclasses of a class?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206791895-finding-all-derived-class-given-parent-class)
 *  [How do I find all anonymous classes created in a class?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206792205-How-to-find-anonymous-classes-in-PsiClass-)
@@ -46,17 +46,17 @@ This FAQ is a topical index of questions that have been asked (and answered) on 
 *  [How do I find the module in which a class is located?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206103859-How-to-get-Module-from-PsiClass-)
 * [PSI Cookbook](http://www.jetbrains.org/intellij/sdk/docs/basics/psi_cookbook.html)
 
-## Working with XML and XML DOM
+##使用XML和XML DOM
 *  [How do I change the value of an XML attribute through the PSI?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139639-Change-xml-attribute-value)
 *  [How do I add custom references to Java elements in XML files?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206795875-XmlTagValue-reference-to-Java-methods)
 *  [How do I programmatically register a DTD or schema?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206795425-How-to-register-DTD-with-idea)
 *  [What is the "strict" parameter in DomElement.getParentOfType()?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206791535-DOM-DomElement-getParentOfType)
 
-## Code Completion
+## 代码完成
 *  [How do I determine what type of code completion was invoked?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206133529-How-to-determine-what-type-of-code-completion-was-invoked)
 *  [How do I provide additional code completion in specific places of a Java file?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206139729-Custom-completion-in-editor)
 
-## Refactoring
+## 重构
 *  [How can I receive notifications about refactoring events?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206795955-Refactoring-Listeners)
 *  [How do I show a refactoring dialog programmatically?](https://intellij-support.jetbrains.com/hc/en-us/community/posts/206800005-How-to-invoke-refactoring-dialog-not-refactoring-itself-)
 

@@ -1,57 +1,56 @@
 ---
-title: About this Guide
+title: 关于本指南
 ---
 
-This guide is split into several parts, similar to a text book. Each part builds on the content of the previous part, but it is not necessary to read the guide in order. The [Key Topics](key_topics.md) page aims to link to the pages that are necessary to be able to understand the architecture and get started building plugins.
+本指南分为几个部分，类似于课本。 每个部分都建立在前一部分的内容上，但是没有必要按顺序阅读指南。 [Key Topics](key_topics.md)页面旨在链接到能够理解架构和开始构建插件所必需的页面。
 
-> **NOTE** While browsing this guide, you will notice that there are topics that are greyed out. Unfortunately, the guide is not complete and contains placeholders for certain topics. We are working on increasing the coverage, but if you get stuck due to missing content, please see the [Getting Help](getting_help.md) section for details on how to get moving again.
+> **NOTE** 浏览本指南时，您会注意到有些主题显示为灰色。 不幸的是，该指南并不完整，并包含某些主题的占位符。 我们正在努力扩大覆盖范围，但是如果您由于缺少内容而陷入困境，请参阅[获得帮助](getting_help.md)部分以了解有关如何再次移动的详细信息。
 >
-> The guide is also [Open Source on GitHub](https://github.com/JetBrains/intellij-sdk-docs), and Pull Requests for new content or updates are always gratefully received. A Pull Request does not need to be fully comprehensive - if a little update would help you, it will help other developers too! All pull requests will be reviewed before being accepted, so don't worry about inaccuracies. Please see the [Contributing](/CONTRIBUTING.md) page for details on building the guide locally and contributing.
+> 这一份指南也在[GitHub](https://github.com/JetBrains/intellij-sdk-docs)开源了, 并总是感激地收到新内容的请求。 合并请求不需要全面综合 - 如果一个小小的更新可以帮助你，它也会帮助其他开发者！ 所有拉请求将被接受之前审查，所以不要担心不准确。 请参阅[贡献](/CONTRIBUTING.md) 页面 查看有关在本地建设指南和贡献的详细信息。
+* [**Part I - 插件**](/basics.md)
 
-* [**Part I - Plugins**](/basics.md)
+    介绍如何创建一个可以扩展_IntelliJ Platform_的插件。 包括如何设置项目，注册扩展点，指定_IntelliJ Platform_的特定版本以及如何打包，部署和测试插件的详细信息。
 
-    Describes how to create a plugin that can extend the _IntelliJ Platform_. Includes details on how to set up the project, register extension points, target specific versions of the _IntelliJ Platform_, and how to package, deploy and test your plugins.
+* [**Part II - 结构**](/basics/architectural_overview.md)
 
-* [**Part II - Architecture**](/basics/architectural_overview.md)
+    提供关于*IntelliJ Platform*体系结构的高层次介绍性概述，了解它是如何分解成几个层次的 - 基础平台，项目模型，功能等等。 它还介绍了程序结构索引（PSI），它为_IntelliJ Platform_提供了许多不同语言的语法和语义模型。
 
-    Provides a high level, introductory overview of the architecture of the _IntelliJ Platform_, looking at how it is split into several layers - Base Platform, Project Model, Features, and so on. It also introduces the Program Structure Index (PSI) which provides the _IntelliJ Platform_ with syntactic and semantic models for many different languages.
+* [**Part III - 基础平台**](/platform/fundamentals.md)
 
-* [**Part III - Base Platform**](/platform/fundamentals.md)
+    介绍该体系结构的基础层，它提供了许多功能和实用程序，如组件模型，用户界面，文档和编辑器，虚拟文件系统，设置和线程以及后台任务。 基本平台层本质上包含*IntelliJ Platform*的功能，该功能不针对语言功能或解析。
 
-    Describes the foundational layer of the architecture, which provides many features and utilities, such as the component model, the user interface, documents and editors, the virtual file system, settings and threading and background tasks. The Base Platform layer essentially comprises the functionality of the _IntelliJ Platform_ that does not target language features or parsing.
+* [**Part IV - 项目模型**](/reference_guide/project_model.md)
 
-* [**Part IV - Project Model**](/reference_guide/project_model.md)
-
-    Documents the Project Model, which represents the files and configuration of the currently loaded project, as well as the build system used to build the project.
+    记录项目模型，它表示当前加载的项目的文件和配置，以及用于构建项目的构建系统。
 
 * [**Part V - PSI**](/basics/indexing_and_psi_stubs.md)
 
-    The Program Structure Index builds the syntactic and semantic models for lots of different file types. This section describes how to work with the PSI, navigating and manipulating the syntax trees, and also looks at the powerful references system, which allows a syntax tree node to reference an item in the semantic model. It also details how the PSI creates and uses indexes.
+    程序结构索引为许多不同的文件类型建立语法和语义模型。 本节介绍如何使用PSI，浏览和操作语法树，还要查看强大的引用系统，它允许语法树节点引用语义模型中的项目。 它还详细介绍了PSI如何创建和使用索引。
 
-* **Part VI - Features**
+* **Part VI - 特征**
 
-    Describes how to extend and interact with various features that use the PSI layer, such as code completion, navigation, <kbd>Alt</kbd>+<kbd>Enter</kbd> items, intentions, refactorings and more. See also the section on Custom Languages below for language specific features that are only applicable when adding support for a new langauge.
+    介绍如何扩展和使用PSI图层的各种功能进行交互，如代码完成，导航，<kbd>Alt</kbd> + <kbd>Enter</kbd>项目，意图，重构等。 另请参阅下面的“自定义语言”部分，了解仅在添加对新语言的支持时适用的语言特定功能。
 
-* [**Part VII - Product Specific**](/products/idea.md)
+* [**Part VII -产品特定**](/products/idea.md)
 
-    A lot of the functionality in the _IntelliJ Platform_ is language and product agnostic. For example, code inspections work the same in Java as they do in Ruby, it is just the syntax trees and semantic information that is different. This section describes product specific features, such as specific project model differences and how to target them in a plugin.
+    _IntelliJ Platform_中的许多功能都是语言和产品不可知的。 例如，代码检查在Java中的工作方式与在Ruby中的工作方式相同，只是语法树和语义信息不同。 本节介绍产品的特定功能，如特定的项目模型差异以及如何将其定位到插件中。
 
-* [**Part VIII - Custom Languages**](/reference_guide/custom_language_support.md)
+* [**Part VIII - 自定义语言**](/reference_guide/custom_language_support.md)
 
-    Plugins frequently extend support for existing languages, such as adding inspections to Java files. This section describes how to add support to the _IntelliJ Platform_ for a new language, that isn't supported by default, creating parsers, syntactic and semantic models and all the features that build on top.
+    插件经常扩展对现有语言的支持，例如添加对Java文件的检查。 本节介绍如何向_IntelliJ Platform_添加对默认不支持的新语言的支持，创建解析器，语法和语义模型以及构建在顶部的所有功能。
 
-* **Part IX - Custom IDEs**
+* **Part IX - 自定义IDE**
 
-    Documents how to use the _IntelliJ Platform_ to create a new, custom IDE, rather than plugins to an existing product, e.g. like WebStorm, or Android Studio.
+    介绍如何使用_IntelliJ Platform_创建新的自定义IDE，而不是插件到现有产品，例如 如WebStorm或Android Studio。
 
-* [**Part X - Plugin Repository API**](/plugin_repository/index.md)
+* [**Part X - 插件库API**](/plugin_repository/index.md)
 
-    Documents the API for the [Plugin Repository](https://plugins.jetbrains.com) service that JetBrains maintains and is used to host plugins. It is not necessary to know this API in order to publish plugins - plugins can be uploaded manually, or via the Gradle IntelliJ Plugin.
+    记录JetBrains维护并用于托管插件的[Plugin Repository](https://plugins.jetbrains.com)服务的API。 没有必要知道这个API来发布插件 - 插件可以手动上传，或通过Gradle IntelliJ插件。
 
-* [**Appendix I - Tutorials**](/tutorials.md)
+* [**Appendix I - 教程**](/tutorials.md)
 
-    Provides tutorials and links to working sample code to demonstrate various features and functionality related to the _IntelliJ Platform_.
+    提供工作示例代码的教程和链接，以演示与_IntelliJ Platform_相关的各种功能和功能。
 
-* [**Appendix II - Resources**](/resources.md)
+* [**Appendix II - 资源**](/resources.md)
 
-    Links to useful resources, such as the IntelliJ Community Edition source code, the Plugin Development forum and the Plugin Developers Gitter room.
+    链接到有用的资源，例如IntelliJ Community Edition源代码，Plugin Development论坛和Plugin Developers Gitter room。

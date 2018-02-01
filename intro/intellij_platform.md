@@ -1,40 +1,39 @@
 ---
-title: What is the IntelliJ Platform?
+title:什么是 IntelliJ Platform？
 ---
 
-The _IntelliJ Platform_ is not a product in and of itself, but provides a platform for building IDEs. It is used to power JetBrains products such as [IntelliJ IDEA](https://www.jetbrains.com/idea/), [WebStorm](https://www.jetbrains.com/webstorm/), [RubyMine](https://www.jetbrains.com/ruby/), [DataGrip](https://www.jetbrains.com/datagrip/) and [Rider](https://www.jetbrains.com/rider/). It is also Open Source, and can be used by third parties to build IDEs, such as [Android Studio](https://developer.android.com/studio/index.html) from Google.
+_IntelliJ平台_本身并不是一个产品，而是为构建IDE提供了一个平台。 它被用来驱动JetBrains产品，如[IntelliJ IDEA](https://www.jetbrains.com/idea/), [WebStorm](https://www.jetbrains.com/webstorm/), [RubyMine](https://www.jetbrains.com/ruby/), [DataGrip](https://www.jetbrains.com/datagrip/) and [Rider](https://www.jetbrains.com/rider/). 它也是开源的，可以被第三方用来构建IDE，比如google的[Android Studio](https://developer.android.com/studio/index.html) .
 
-The _IntelliJ Platform_ provides all of the infrastructure that these IDEs need to provide rich language tooling support. It provides a component driven, cross platform JVM based application host with a high level user interface toolkit for creating tool windows, tree views and lists (supporting fast search) as well as popup menus and dialogs.
+*IntelliJ Platform*提供了这些IDE需要提供丰富的语言工具支持的所有基础设施。 它提供了一个组件驱动的，跨平台的基于JVM的应用程序主机，具有高级用户界面工具包，用于创建工具窗口，树视图和列表（支持快速搜索）以及弹出菜单和对话框。
 
-It also includes an image editor as well as a full text editor, and provides abstract implementations of syntax highlighting, code folding, code completion, and other rich text editing features.
+它还包括图像编辑器和全文本编辑器，并提供语法高亮，代码折叠，代码完成和其他丰富文本编辑功能的抽象实现。
 
-Furthermore, it includes pluggable APIs to build common IDE functionality, such as a project model and a build system. It also provides infrastructure for a very rich debugging experience, with language agnostic advanced breakpoint support, call stacks, watch windows and expression evaluation.
+此外，它还包括可插入的API以构建常见的IDE功能，如项目模型和构建系统。它还提供了非常丰富的调试体验的基础设施，具有语言不可知的高级断点支持，调用堆栈，监视窗口和表达式评估。
 
-But the _IntelliJ Platform_'s real power comes from the Program Structure Index (PSI). This is a set of functionality that can be used to parse files and build rich syntactic and semantic models of the code, and to build indexes from this data. This powers a lot of functionality, from quick navigating to files, types and symbols, to the contents of code completion windows and find usages, code inspections and code rewriting, for quick fixes or refactorings, as well as many other features.
+但是_IntelliJ平台的真正实力来自于计划结构指数（PSI）。这是一组功能，可用于解析文件，构建丰富的代码语法和语义模型，并从这些数据构建索引。这提供了许多功能，从快速导航到文件，类型和符号，到代码完成窗口的内容，并找到用法，代码检查和代码重写，快速修复或重构，以及许多其他功能。
 
-The _IntelliJ Platform_ includes parsers and a PSI model for a number of languages, and its composable nature means that it is possible to add support for other languages.
+*IntelliJ Platform*包含许多语言的解析器和PSI模型，其可组合性意味着可以添加对其他语言的支持。
 
-## Plugins
+## 插件
 
-Products built on the _IntelliJ Platform_ are composable applications, with the platform being responsible for the creation of components, and the injection of dependencies into classes. The _IntelliJ Platform_ fully supports plugins, and JetBrains hosts a [plugin repository](https://plugins.jetbrains.com) that can be used to distribute plugins that support one or more of the products. It is also possible to host your own repositories, and distribute plugins separately.
+构建在*IntelliJ Platform*上的产品是可组合的应用程序，该平台负责创建组件，并将依赖注入到类中。 *IntelliJ Platform*完全支持插件，而JetBrains则拥有一个[插件库](https://plugins.jetbrains.com) 可以用来分发支持一个或多个产品的插件。 也可以托管你自己的仓库，并分别分发插件。
 
-Plugins can extend the platform in lots of ways, from adding a simple menu item to adding support for a complete language, build system and debugger. A lot of the existing functionality in the _IntelliJ Platform_ is written as plugins that can be included or excluded depending on the needs of the end product. See the section on [Plugins](/basics.md) for more details.
+插件可以通过多种方式扩展平台，从添加简单的菜单项到添加对完整语言的支持，构建系统和调试器。 *IntelliJ Platform*中的许多现有功能都是作为插件编写的，可以根据最终产品的需求包含或排除。 请参阅[插件]一节(/basics.md) 获取更多细节.
 
-The _Intellij Platform_ is a JVM application, written mostly in Java and Kotlin. You should be familiar with these languages, and associated tooling, in order to write plugins for products based on the _IntelliJ Platform_. At this time, it's not possible to extend the _IntelliJ Platform_ in non-JVM languages.
-
+*IntelliJ Platform*是一个JVM应用程序，主要用Java和Kotlin编写。 您应该熟悉这些语言和相关的工具，才能为基于*IntelliJ Platform*的产品编写插件。 目前，无法在非JVM语言中扩展*IntelliJ Platform*。
 ## Open Source
 
-The _IntelliJ Platform_ is Open Source, under the [Apache license](https://github.com/JetBrains/intellij-community/blob/master/LICENSE.txt), and [hosted on GitHub](https://github.com/JetBrains/intellij-community).
+*IntelliJ Platform*是开源的，在[Apache许可证](https://github.com/JetBrains/intellij-community/blob/master/LICENSE.txt) 和 [在GitHub上托管](https://github.com/JetBrains/intellij-community)之下.
 
-While this guide refers to the _IntelliJ Platform_ as a separate entity, there is no "IntelliJ Platform" GitHub repo. Instead, the platform is considered to be an almost complete overlap with the IntelliJ IDEA Community Edition, which is a free and Open Source version of IntelliJ IDEA Ultimate (the GitHub repo linked above is the [JetBrains/intellij-community](https://github.com/JetBrains/intellij-community) repo).
+虽然本指南将*IntelliJ Platform*作为单独的实体引用，但没有“IntelliJ Platform”GitHub仓库。 相反，该平台被认为是与IntelliJ IDEA社区版几乎完全重叠，IntelliJ IDEA社区版是IntelliJ IDEA Ultimate的免费和开源版本(上面链接的GitHub仓库是[JetBrains / intellij社区](https://github.com/JetBrains/intellij-community) 仓库).
 
-IntelliJ IDEA Ultimate is a superset of the IntelliJ IDEA Community Edition. It is based on the community edition, but includes closed source plugins ([see this feature comparison](https://www.jetbrains.com/idea/features/editions_comparison_matrix.html)). Similarly, other products such as WebStorm and DataGrip are based on the IntelliJ IDEA Community Edition, but with a different set of plugins included and excluding other default plugins.
+IntelliJ IDEA Ultimate是IntelliJ IDEA Community Edition的超集。 它基于社区版，但包括封闭的源代码插件（[请参阅此功能比较](https://www.jetbrains.com/idea/features/editions_comparison_matrix.html)). 同样，WebStorm和DataGrip等其他产品都基于IntelliJ IDEA社区版，但是包含了一组不同的插件，不包括其他默认插件。
 
-This allows plugins to target multiple products, as each product will include base functionality and a selection of plugins from the IntelliJ IDEA Community Edition repo. This is what we call the _IntelliJ Platform_.
+这允许插件将多个产品作为目标，因为每个产品都将包含基本功能以及IntelliJ IDEA Community Edition回购的一些插件。 这就是我们所说的*IntelliJ Platform*。
 
-Typically, an IDE that is based on the _IntelliJ Platform_ will include the `intellij-community` repo as a Git submodule and provide configuration to describe which plugins from the `intellij-community`, and which custom plugins will make up the product. This is how the IDEA Ultimate team work, and they contribute code to both the custom plugins and the _IntelliJ Platform_ itself.
+通常，基于*IntelliJ Platform*的IDE将包含`intellij-community`仓库作为Git子模块，并提供配置以描述来自`intellij-community`的哪些插件，以及哪些自定义插件将组成产品。 这就是IDEA旗舰团队的工作方式，他们为自定义插件和*IntelliJ Platform*本身贡献代码。
 
-Of course, because the _IntelliJ Platform_ is open source, we also accept [pull requests](https://github.com/JetBrains/intellij-community/pulls) to the platform itself, rather than just opening the source for view. Issue tracking is managed with [YouTrack (using the IDEA project)](https://youtrack.jetbrains.com/issues/IDEA), and if you wish to contribute to the platform, it is usually a good idea to open an issue describing the changes you wish to make before making the changes - this allows the team chance to give feedback and advice. More details can be found in the section on [Contributing to the IntelliJ Platform](/basics/platform_contributions.md).
+当然，因为*IntelliJ Platform*是开源的，我们也接受[pull requests](https://github.com/JetBrains/intellij-community/pulls) 到平台本身， 而不是仅仅z爱这里查看代码而提交问题跟踪是通过[YouTrack](using the IDEA project)](https://youtrack.jetbrains.com/issues/IDEA), and if you wish to contribute to the platform, it is usually a good idea to open an issue describing the changes you wish to make before making the changes - this allows the team chance to give feedback and advice. More details can be found in the section on [Contributing to the IntelliJ Platform](/basics/platform_contributions.md).
 
 ## Rider
 
